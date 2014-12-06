@@ -13,7 +13,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        logger.info("session_id={}", request.getRequestedSessionId());
+        this.logger.info("session_id={}", request.getRequestedSessionId());
         String login = request.getContextPath() + "/login";
         if (request.getRequestURI().startsWith(login)) {
             return true;

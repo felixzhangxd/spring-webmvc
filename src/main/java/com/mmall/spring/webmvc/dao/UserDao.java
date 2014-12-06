@@ -10,11 +10,11 @@ public class UserDao {
     private Map<Integer, String> userMap = new HashMap<Integer, String>();
 
     public UserDao() {
-        userMap.put(1, "felix");
-        userMap.put(2, "justin");
+        this.userMap.put(1, "felix");
+        this.userMap.put(2, "justin");
     }
 
     public String find(Integer id) {
-        return userMap.get(id);
+        return this.userMap.get(id);
     }
 }

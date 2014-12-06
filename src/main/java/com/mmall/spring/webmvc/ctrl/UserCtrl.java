@@ -18,6 +18,6 @@ public class UserCtrl {
     @ResponseBody
     @RequestMapping(value = { "/find/{id}" })
     public String find(@PathVariable Integer id) {
-        return userDao.find(id);
+        return this.userDao.find(id);
     }
 }

@@ -16,12 +16,12 @@ import com.mmall.spring.webmvc.dao.UserDao;
 public class LoginCtrl {
     @Resource
     private UserDao userDao;
-    
+
     @ResponseBody
     @RequestMapping(value = { "/{id}" })
     public String login(HttpSession session, @PathVariable Integer id) {
-        String name = userDao.find(id);
-        if(StringUtils.isEmpty(name)) {
+        String name = this.userDao.find(id);
+        if (StringUtils.isEmpty(name)) {
             return "login fail";
         }
         session.setAttribute("id", id);
